@@ -12,12 +12,15 @@ namespace ConsoleApp10
         
         static void Welcome()
         {
-            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Battleships!");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Welcome to Battleships!");
         }
 
         static void Main(string[] args)
         {
+            Welcome();
             string[,] hitMatrix = new string[12, 12];
 
             for (int i = 0; i <= 11; i++)
