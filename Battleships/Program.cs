@@ -9,12 +9,10 @@ namespace ConsoleApp10
     class Program
     {
 
-
-
-
         static void Main(string[] args)
         {
             string[,] hitMatrix = new string[12, 12];
+
 
             for (int i = 0; i <= 11; i++)
             {
@@ -25,9 +23,16 @@ namespace ConsoleApp10
                 }
             }
 
-            string u = "0";
+         
+                Random generator = new Random();
+                int rand = generator.Next(1, 12);
+      
+                Random generator2 = new Random();
+                int rand2 = generator.Next(1, 12);
 
-            u = Console.ReadLine();
+                hitMatrix[rand, rand2] = "#";
+          
+
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
             Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
@@ -46,11 +51,6 @@ namespace ConsoleApp10
                 for (int j = 0; j < 12; j++)
                 {
 
-                    //System.Threading.Thread.Sleep(20);
-
-
-
-                    
                     Console.Write("┃");
                     Console.Write(" " + hitMatrix[i, j] + " ");
                     
@@ -68,7 +68,7 @@ namespace ConsoleApp10
                     Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
                 }
             }
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }
