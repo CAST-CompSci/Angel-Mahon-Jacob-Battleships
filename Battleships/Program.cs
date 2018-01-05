@@ -21,7 +21,7 @@ namespace ConsoleApp10
 
                 for (int j = 0; j <= 11; j++)
                 {
-                    hitMatrix[i, j] = (" ");
+                    hitMatrix[i, j] = ("A");
                 }
             }
 
