@@ -9,8 +9,12 @@ namespace ConsoleApp10
     class Program
     {
 
-
-
+        
+        static void Welcome()
+        {
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Battleships!");
+        }
 
         static void Main(string[] args)
         {
