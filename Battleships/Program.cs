@@ -25,9 +25,7 @@ namespace ConsoleApp10
                 }
             }
 
-            string u = "0";
-
-            u = Console.ReadLine();
+            
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
             Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
