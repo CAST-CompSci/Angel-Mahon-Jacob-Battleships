@@ -12,6 +12,10 @@ namespace ConsoleApp10
         static void Main(string[] args)
         {
 
+            Console.SetWindowSize(60, 60);
+            Console.BufferHeight = 60;
+            Console.BufferWidth = 100;
+
             Console.ForegroundColor = ConsoleColor.Blue; 
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
