@@ -8,25 +8,70 @@ namespace ConsoleApp10
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            //Console.ForegroundColor = ConsoleColor.Blue; 
-            //Console.BackgroundColor = ConsoleColor.White;
-            //Console.Clear();
+
+            Console.SetWindowSize(60, 60);
+            Console.BufferHeight = 60;
+            Console.BufferWidth = 100;
+
+            Console.ForegroundColor = ConsoleColor.Blue; 
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
             //^Changes whole console colour and foreground colour now.
 
+
             string[,] hitMatrix = new string[12, 12];
+
 
             for (int i = 0; i <= 11; i++)
             {
                 for (int j = 0; j <= 11; j++)
                 {
-                    hitMatrix[i, j] = ("#");
+                    hitMatrix[i, j] = (" ");
                 }
             }
 
-            Console.OutputEncoding = Encoding.UTF8;
-          
+
+         
+                Random generator = new Random();
+                int rand = generator.Next(1, 12);
+      
+                Random generator2 = new Random();
+                int rand2 = generator.Next(1, 12);
+
+                hitMatrix[rand, rand2] = "#";
+
+                Random generator3 = new Random();
+                int rand3 = generator.Next(1,4);
+            if (rand3 == 1)
+            {
+              rand = rand + 1;
+            hitMatrix[rand, rand2] = "#";
+            }
+              else if  (rand3 == 2)
+              {
+              rand = rand - 1;
+              hitMatrix[rand, rand2] = "#";
+              }
+                  else if  (rand3 == 3)
+                  {
+                   rand2 = rand2 + 1;
+                   hitMatrix[rand, rand2] = "#";
+                  }
+            
+                      else if (rand3 == 4)
+                      {
+                       rand2 = rand2 - 1;
+                       hitMatrix[rand, rand2] = "#";
+                      }
+
+            
+
+
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
             Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
 
@@ -42,7 +87,7 @@ namespace ConsoleApp10
                 }
                 for (int j = 0; j < 12; j++)
                 {
-                    System.Threading.Thread.Sleep(2);
+
                     Console.Write("┃");
                     Console.Write(" " + hitMatrix[i, j] + " ");         
                 }
@@ -58,9 +103,8 @@ namespace ConsoleApp10
                 {                   
                     Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
                 }
-
             }
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }
