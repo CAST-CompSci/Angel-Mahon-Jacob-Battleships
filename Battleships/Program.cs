@@ -11,10 +11,16 @@ namespace ConsoleApp10
 
         static void Main(string[] args)
         {
-            //Console.ForegroundColor = ConsoleColor.Blue; 
-            //Console.BackgroundColor = ConsoleColor.White;
-            //Console.Clear();
+
+            Console.SetWindowSize(60, 60);
+            Console.BufferHeight = 60;
+            Console.BufferWidth = 100;
+
+            Console.ForegroundColor = ConsoleColor.Blue; 
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
             //^Changes whole console colour and foreground colour now.
+
 
             string[,] hitMatrix = new string[12, 12];
 
@@ -36,7 +42,33 @@ namespace ConsoleApp10
                 int rand2 = generator.Next(1, 12);
 
                 hitMatrix[rand, rand2] = "#";
-          
+
+                Random generator3 = new Random();
+                int rand3 = generator.Next(1,4);
+            if (rand3 == 1)
+            {
+              rand = rand + 1;
+            hitMatrix[rand, rand2] = "#";
+            }
+              else if  (rand3 == 2)
+              {
+              rand = rand - 1;
+              hitMatrix[rand, rand2] = "#";
+              }
+                  else if  (rand3 == 3)
+                  {
+                   rand2 = rand2 + 1;
+                   hitMatrix[rand, rand2] = "#";
+                  }
+            
+                      else if (rand3 == 4)
+                      {
+                       rand2 = rand2 - 1;
+                       hitMatrix[rand, rand2] = "#";
+                      }
+
+            
+
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
@@ -71,7 +103,6 @@ namespace ConsoleApp10
                 {                   
                     Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
                 }
-
             }
             Console.Read();
         }
