@@ -11,10 +11,16 @@ namespace ConsoleApp10
 
         static void Main(string[] args)
         {
-            //Console.ForegroundColor = ConsoleColor.Blue; 
-            //Console.BackgroundColor = ConsoleColor.White;
-            //Console.Clear();
+
+            Console.SetWindowSize(60, 60);
+            Console.BufferHeight = 60;
+            Console.BufferWidth = 100;
+
+            Console.ForegroundColor = ConsoleColor.Blue; 
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
             //^Changes whole console colour and foreground colour now.
+
 
             string[,] hitMatrix = new string[12, 12];
 
@@ -97,7 +103,6 @@ namespace ConsoleApp10
                 {                   
                     Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
                 }
-
             }
             Console.Read();
         }
