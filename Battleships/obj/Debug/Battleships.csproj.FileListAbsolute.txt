@@ -1,7 +1,0 @@
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\bin\Debug\Battleships.exe.config
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\bin\Debug\Battleships.exe
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\bin\Debug\Battleships.pdb
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\obj\Debug\Battleships.exe
-\\pfa.education\utccstudentusers$\15u-mhughes\Documents\Computer Science\Programs\Battleships\Battleships\obj\Debug\Battleships.pdb
