@@ -12,15 +12,6 @@ namespace ConsoleApp10
         static void Main(string[] args)
         {
 
-            {
-              
-                {
-                    string hello = "Hello, World!";
-                    Console.SetCursorPosition(Console.WindowWidth / 2 - hello.Length / 2, Console.WindowHeight / 2);
-                    Console.WriteLine(hello);
-                }
-            }
-
             Console.ForegroundColor = ConsoleColor.Blue; 
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
@@ -37,10 +28,8 @@ namespace ConsoleApp10
                 }
             }
 
-            string u = "0";
-            u = Console.ReadLine();
-
             Console.OutputEncoding = Encoding.UTF8;
+          
             Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
             Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
 
