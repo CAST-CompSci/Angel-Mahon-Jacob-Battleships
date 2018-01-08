@@ -11,3 +11,4 @@
 \\pfa.education\utccstudentusers$\15u-jwindsor\Documents\Computer Science\Git\Battleships proj2\Battleships\obj\Debug\Battleships.csproj.CoreCompileInputs.cache
 \\pfa.education\utccstudentusers$\15u-jwindsor\Documents\Computer Science\Git\Battleships proj2\Battleships\obj\Debug\Battleships.exe
 \\pfa.education\utccstudentusers$\15u-jwindsor\Documents\Computer Science\Git\Battleships proj2\Battleships\obj\Debug\Battleships.pdb
+\\pfa.education\utccstudentusers$\15u-jwindsor\Documents\Computer Science\Git\Battleships proj2\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache

@@ -8,12 +8,24 @@ namespace ConsoleApp10
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            //Console.ForegroundColor = ConsoleColor.Blue; 
-            //Console.BackgroundColor = ConsoleColor.White;
-            //Console.Clear();
+
+            {
+              
+                {
+                    string hello = "Hello, World!";
+                    Console.SetCursorPosition(Console.WindowWidth / 2 - hello.Length / 2, Console.WindowHeight / 2);
+                    Console.WriteLine(hello);
+                }
+            }
+
+            Console.ForegroundColor = ConsoleColor.Blue; 
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
             //^Changes whole console colour and foreground colour now.
+
 
             string[,] hitMatrix = new string[12, 12];
 
@@ -60,7 +72,6 @@ namespace ConsoleApp10
                 {                   
                     Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
                 }
-
             }
             Console.ReadLine();
         }
