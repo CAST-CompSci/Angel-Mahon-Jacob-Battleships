@@ -36,7 +36,33 @@ namespace ConsoleApp10
                 int rand2 = generator.Next(1, 12);
 
                 hitMatrix[rand, rand2] = "#";
-          
+
+                Random generator3 = new Random();
+                int rand3 = generator.Next(1,4);
+            if (rand3 == 1)
+            {
+              rand = rand + 1;
+            hitMatrix[rand, rand2] = "#";
+            }
+              else if  (rand3 == 2)
+              {
+              rand = rand - 1;
+              hitMatrix[rand, rand2] = "#";
+              }
+                  else if  (rand3 == 3)
+                  {
+                   rand2 = rand2 + 1;
+                   hitMatrix[rand, rand2] = "#";
+                  }
+            
+                      else if (rand3 == 4)
+                      {
+                       rand2 = rand2 - 1;
+                       hitMatrix[rand, rand2] = "#";
+                      }
+
+            
+
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
