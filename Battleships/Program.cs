@@ -27,7 +27,8 @@ namespace ConsoleApp10
                 }
             }
 
-
+                Random generator4 = new Random();
+                int size = generator.Next(2,5);
          
                 Random generator = new Random();
                 int rand = generator.Next(1, 12);
@@ -39,29 +40,32 @@ namespace ConsoleApp10
 
                 Random generator3 = new Random();
                 int rand3 = generator.Next(1,4);
-            if (rand3 == 1)
+            int count = 1; 
+            while (count <= size)
             {
+              if (rand3 == 1)
+              {
               rand = rand + 1;
-            hitMatrix[rand, rand2] = "#";
+              hitMatrix[rand, rand2] = "#";
             }
               else if  (rand3 == 2)
               {
               rand = rand - 1;
               hitMatrix[rand, rand2] = "#";
               }
-                  else if  (rand3 == 3)
-                  {
-                   rand2 = rand2 + 1;
-                   hitMatrix[rand, rand2] = "#";
-                  }
+              else if  (rand3 == 3)
+              {
+               rand2 = rand2 + 1;
+               hitMatrix[rand, rand2] = "#";
+              }
             
-                      else if (rand3 == 4)
-                      {
-                       rand2 = rand2 - 1;
-                       hitMatrix[rand, rand2] = "#";
-                      }
+              else if (rand3 == 4)
+              {
+               rand2 = rand2 - 1;
+               hitMatrix[rand, rand2] = "#";
+              }
 
-            
+            }
 
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
