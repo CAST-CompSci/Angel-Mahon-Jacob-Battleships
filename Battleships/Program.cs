@@ -26,98 +26,108 @@ namespace ConsoleApp10
                     hitMatrix[i, j] = (" ");
                 }
             }
-
+            int p = 1;
+            while (p == 1)
+            {
                 Random generator4 = new Random();
-                int size = generator4.Next(2,5);
-         
+                int size = generator4.Next(2, 5);
+
                 Random generator = new Random();
                 int rand = generator.Next(1, 12);
-      
+
                 Random generator2 = new Random();
                 int rand2 = generator.Next(1, 12);
 
                 hitMatrix[rand, rand2] = "#";
 
                 Random generator3 = new Random();
-                int rand3 = generator.Next(1,4);
-           
-              if (rand3 == 1)
-              {
-                while (size > 0)
-                {
-                    rand = rand + 1;
-                    hitMatrix[rand, rand2] = "#";
-                    size = size - 1;
-                }
-              }
-              else if  (rand3 == 2)
-              {
-                while (size > 0)
-                {
-                    rand = rand - 1;
-                    hitMatrix[rand, rand2] = "#";
-                    size = size - 1;
-                }
-              }
-              else if  (rand3 == 3)
-              {
-                while (size > 0)
-                {
-                    rand2 = rand2 + 1;
-                    hitMatrix[rand, rand2] = "#";
-                    size = size - 1;
-                }
-              }
-            
-              else if (rand3 == 4)
-              {
-                while (size > 0)
-                {
-                    rand2 = rand2 - 1;
-                    hitMatrix[rand, rand2] = "#";
-                    size = size - 1;
-                }
-              }
+                int rand3 = generator.Next(1, 4);
 
-            
+                if (rand3 == 1)
+                {
+                    while (size > 0)
+                    {
+                        rand = rand + 1;
+                        hitMatrix[rand, rand2] = "#";
+                        size = size - 1;
+                    }
+                }
+                else if (rand3 == 2)
+                {
+                    while (size > 0)
+                    {
+                        rand = rand - 1;
+                        
+                        hitMatrix[rand, rand2] = "#";
+                        size = size - 1;
+                    }
+                }
+                else if (rand3 == 3)
+                {
+                    while (size > 0)
+                    {
+                        rand2 = rand2 + 1;
+                        
+                        hitMatrix[rand, rand2] = "#";
+                        size = size - 1;
+                    }
+                }
+
+                else if (rand3 == 4)
+                {
+                    while (size > 0)
+                    {
 
 
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+                        rand2 = rand2 - 1;
+                        
+                        hitMatrix[rand, rand2] = "#";
+                        size = size - 1;
 
-            Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
-            Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
+                    }
+                }
 
-            for (int i = 0; i <= 11; i++)
-            {
-                if (i < 9) { 
-                Console.Write(i + 1);
-                Console.Write(" ");
-                }
-                else
+
+
+
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+                Console.WriteLine("    A   B   C   D   E   F   G   H   I   J   K   L");
+                Console.WriteLine("  ┏━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┳━━━┓");
+
+                for (int i = 0; i <= 11; i++)
                 {
-                    Console.Write(i + 1);
-                }
-                for (int j = 0; j < 12; j++)
-                {
+                    if (i < 9)
+                    {
+                        Console.Write(i + 1);
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write(i + 1);
+                    }
+                    for (int j = 0; j < 12; j++)
+                    {
+
+                        Console.Write("┃");
+                        Console.Write(" " + hitMatrix[i, j] + " ");
+                    }
 
                     Console.Write("┃");
-                    Console.Write(" " + hitMatrix[i, j] + " ");         
-                }
+                    Console.WriteLine(" ");
 
-                Console.Write("┃");
-                Console.WriteLine(" ");
+                    if (i < 11)
+                    {
+                        Console.WriteLine("  ┣━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━┫");
+                    }
+                    else
+                    {
+                        Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
+                    }
 
-                if (i < 11)
-                {
-                    Console.WriteLine("  ┣━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━╋━━━┫");
                 }
-                else
-                {                   
-                    Console.WriteLine("  ┗━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┻━━━┛");
-                }
-
+                Console.Read();
             }
-            Console.Read();
         }
     }
 }
